@@ -106,12 +106,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
         ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-        // Direct controls: Left arrow moves left, Right arrow moves right
-        if (keys.ArrowLeft && boat.x > 0) {
-            boat.x -= boat.speed;
-        }
-        if (keys.ArrowRight && boat.x < canvas.width - boat.width) {
+        // Inverted controls: Left arrow moves right, Right arrow moves left
+        if (keys.ArrowLeft && boat.x < canvas.width - boat.width) {
             boat.x += boat.speed;
+        }
+        if (keys.ArrowRight && boat.x > 0) {
+            boat.x -= boat.speed;
         }
 
         // Handle obstacle spawning and movement
