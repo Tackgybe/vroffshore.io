@@ -1,0 +1,34 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sailing Adventure Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Ahoy, Sailor! ⛵</h1>
+        <p>Navigate your ship across the digital waves and collect treasure!</p>
+    </header>
+
+    <main>
+        <section class="card">
+            <h2>Sailing Mini-Game</h2>
+            <p>Use the <strong>Left</strong> and <strong>Right</strong> arrow keys to steer your boat and avoid the rocks!</p>
+            
+            <!-- Game Canvas -->
+            <canvas id="gameCanvas" width="350" height="400"></canvas>
+            
+            <div id="scoreBoard">Score: <span id="score">0</span></div>
+            <button id="restartBtn" class="hidden">Play Again</button>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Future Developer. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
