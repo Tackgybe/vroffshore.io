@@ -30,8 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('keydown', (e) => {
         if (e.key === 'ArrowLeft' || e.key === 'ArrowRight') {
             keys[e.key] = true;
-            // Prevent page from scrolling when pressing arrow keys
-            e.preventDefault(); 
+            e.preventDefault(); // Stop page from scrolling
         }
     });
 
@@ -107,7 +106,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-        // Move boat based on input boundaries
+        // Direct controls: Left arrow moves left, Right arrow moves right
         if (keys.ArrowLeft && boat.x > 0) {
             boat.x -= boat.speed;
         }
